@@ -1,12 +1,12 @@
-import numpy as np
-import pandas as pd
+import numpy as np 
+import pandas as pd 
 import joblib
 import matplotlib.pyplot as plt
 import streamlit as st
 from PIL import Image
 
 
-# Load  model a
+# Load  model a 
 model = joblib.load(open("model-final.joblib","rb"))
 
 def data_preprocessor(df):
@@ -30,8 +30,8 @@ def data_preprocessor(df):
 
 def visualize_confidence_level(prediction_proba):
     """
-    this function uses matplotlib to create inference bar chart rendered with streamlit in real-time
-    return type : matplotlib bar chart
+    this function uses matplotlib to create inference bar chart rendered with streamlit in real-time 
+    return type : matplotlib bar chart  
     """
     data = (prediction_proba[0]*100).round(2)
     fig, ax = plt.subplots()
@@ -41,8 +41,8 @@ def visualize_confidence_level(prediction_proba):
     return
 
 st.write("""
-# Diabetes Prediction Data Science Web-App
-This app predicts the potentiality of a high-risk diabetes patient using **features** input via the **side panel**
+# Diabetes Prediction Data Science Web-App 
+This app predicts the potentiality of a high-risk diabetes patient using **features** input via the **side panel** 
 """)
 
 image = Image.open('insulin-image.gif')
@@ -53,7 +53,7 @@ st.sidebar.header('User Input Parameters') #user input parameter collection with
 
 def get_user_input():
     """
-    this function is used to get user input using sidebar slider and selectbox
+    this function is used to get user input using sidebar slider and selectbox 
     return type : pandas dataframe
 
     """
@@ -65,7 +65,7 @@ def get_user_input():
     bmi               = st.sidebar.slider('bmi', 10.0, 70.0, 21.0)
     pedigree_function = st.sidebar.slider('pedigree_function', 0.0, 2.5, 0.2)
     age               = st.sidebar.slider('age', 21.0, 90.0, 21.0)
-
+    
     features = {
         'pregnancies': pregnancies,
         'glucose': glucose,
