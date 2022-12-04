@@ -1,6 +1,7 @@
-# Welcome to Streamlit!
+# CS 551 Project
 
-Edit `/streamlit_app.py` to customize this app to your heart's desire. :heart:
+The app is located in `app-final.py`
 
-If you have any questions, checkout our [documentation](https://docs.streamlit.io) and [community
-forums](https://discuss.streamlit.io).
+The model is located in `model-final.py`
+
+The notebooks used and other materials used to build the model are located in `model-and-notebooks.zip`
